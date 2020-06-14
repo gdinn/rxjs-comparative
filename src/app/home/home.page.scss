@@ -25,3 +25,10 @@
 #container a {
   text-decoration: none;
 }
+
+.buttons {
+  text-align: center;
+  ion-button {
+    margin: 10px;
+  }
+}

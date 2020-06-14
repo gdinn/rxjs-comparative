@@ -1,20 +1,62 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Programming books
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-icon name="refresh-outline"></ion-icon>
+    </ion-buttons>    
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="buttons">
+    <ion-button (click)="refreshRxjs()">Get with rxjs</ion-button>
+    <ion-button (click)="refreshPromises()">Get with promises</ion-button>
   </div>
+
+  <ng-container *ngIf="promisesActivated">
+    <h4>Available</h4>
+    <ion-list>
+      <ion-item *ngFor="let book of available">
+        <h5>{{book.name}}</h5>
+      </ion-item>
+    </ion-list>
+    <h4>Unvailable</h4>
+    <ion-list>
+      <ion-item *ngFor="let book of unavailable">
+        <h5>{{book.name}}</h5>
+      </ion-item>
+    </ion-list>
+    <br>
+    <h4>Where to find</h4>
+    <ion-list>
+      <ion-item *ngFor="let lib of libraries">
+        <h5>{{lib.name}}</h5>
+      </ion-item>
+    </ion-list>
+  </ng-container>
+
+  <ng-container *ngIf="rxjsActivated">
+    <h4>Available</h4>
+    <ion-list>
+      <ion-item *ngFor="let book of available$ | async">
+        <h5>{{book.name}}</h5>
+      </ion-item>
+    </ion-list>
+    <h4>Unvailable</h4>
+    <ion-list>
+      <ion-item *ngFor="let book of unavailable$ | async">
+        <h5>{{book.name}}</h5>
+      </ion-item>
+    </ion-list>
+    <br>
+    <h4>Where to find</h4>
+    <ion-list>
+      <ion-item *ngFor="let lib of libraries$ | async">
+        <h5>{{lib.name}}</h5>
+      </ion-item>
+    </ion-list>
+  </ng-container>
+
 </ion-content>

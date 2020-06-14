@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { BooksPromiseService } from 'src/services/books.promise.service';
+import { BooksRxjsService } from 'src/services/books.rxjs.service';
 
 
 @NgModule({
@@ -14,6 +16,12 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [
+    HomePage
+  ],
+  providers: [
+    BooksPromiseService,
+    BooksRxjsService
+  ]
 })
 export class HomePageModule {}
