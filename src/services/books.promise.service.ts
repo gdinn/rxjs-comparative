@@ -1,8 +1,8 @@
-import { Observable, of, throwError } from 'rxjs';
-import { map, catchError, delay } from 'rxjs/operators'
+import { of } from 'rxjs';
+import { delay } from 'rxjs/operators'
 import { Injectable } from '@angular/core';
 import { BOOKS_RESPONSE } from 'src/mocks/books.mock';
-import { ERROR_MESSAGES } from 'src/languages/messages';
+
 import { LIBRARIES_RESPONSE } from 'src/mocks/libraries.mock';
 
 

@@ -21,11 +21,6 @@ export class HomePage {
     private loadingCtrl: LoadingController,
     private alertCtrl: AlertController
   ) {}
-
-  ngOnInit(){
-    
-  }
-
   available: Array<any>
   unavailable: Array<any>
   libraries: Array<any>

@@ -5,8 +5,6 @@ import { BOOKS_RESPONSE } from 'src/mocks/books.mock';
 import { ERROR_MESSAGES } from 'src/languages/messages';
 import { LIBRARIES_RESPONSE } from 'src/mocks/libraries.mock';
 
-
-
 @Injectable({
   providedIn: 'root'
 })
