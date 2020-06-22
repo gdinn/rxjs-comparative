@@ -47,6 +47,8 @@ There are drawbacks on both aproaches but once you got RxJS covered, it will giv
 * https://auth0.com/blog/javascript-promises-vs-rxjs-observables/
 * https://medium.com/javascript-everyday/javascript-theory-promise-vs-observable-d3087bc1239a
 
+Credits by the links go to @hokauz.
+
 ## How to test?
 
 ```
