@@ -33,7 +33,7 @@ When working with angular, learn RxJS is very useful because angular use several
 
 **Cons**
 
-* Promises will have better supported if converted to observables, and therefore a workload is required.
+* Promises will have better support on RxJS if converted to observables, and therefore a workload is required.
 * Learn the non obvious RxJS way of doing things.
 * Could lead to memory leaks if the streams werent unsubscribed
 
