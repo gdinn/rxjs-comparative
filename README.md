@@ -1,5 +1,7 @@
 # RxJS and pure JS comparison.
 
+(This is a work in progress. Soon I'll add more complex examples.)
+
 This repository showcases the use of different aproaches on concurrent asynchronous calls. The frameworks in use are Ionic and Angular.
 
 The goal is to present a loading, get some data, treat the result, treat possible errors and dismiss the loading without using logic to block the flux.
